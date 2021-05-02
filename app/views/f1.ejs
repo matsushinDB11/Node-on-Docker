@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>F1 2020 Constructor Ranking</title>
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+<!--    <script src="/send_url.js"></script>-->
+</head>
+<body>
+    <h1>F1 2020 Constructors Ranking</h1>
+    <table>
+        <% items.forEach((items) =>{%>
+        <tr>
+            <td><%= items.id %></td>
+            <td><%= items.name %></td>
+        </tr>
+        <% })%>
+    </table>
+
+</body>
+</html>
