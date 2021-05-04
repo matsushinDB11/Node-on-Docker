@@ -2,7 +2,6 @@ version: "3"
 services:
   app:
     build: ./app
-#    image: node:lts
     environment:
       - DEBUG=app
       # ソースコードをnodemonにネットワーク越しに監視させる
@@ -11,6 +10,7 @@ services:
     working_dir: /app
     volumes:
       - ./app:/app
+      - /app/node_modules
     ports:
       - "3000:3000"
     command: npm run dev
