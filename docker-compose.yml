@@ -8,9 +8,9 @@ services:
       # ソースコードをnodemonにネットワーク越しに監視させる
       - CHOKIDAR_USEPOLLING=1
     tty: true
-    working_dir: /src
+    working_dir: /app
     volumes:
-      - ./app:/src
+      - ./app:/app
     ports:
       - "3000:3000"
     command: npm run dev
