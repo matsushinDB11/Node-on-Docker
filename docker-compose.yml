@@ -23,7 +23,9 @@ services:
       MYSQL_USER: apiuser
       MYSQL_PASSWORD: apipasswd
     volumes:
-      - ./db/db-data:/var/lib/mysql
+#      - ./db/db-data:/var/lib/mysql
+#     docker volumeを使ってマウントする
+      - mysql_data:/var/lib/mysql
       - ./db/init:/docker-entrypoint-initdb.d
     restart: always
   phpmyadmin:
@@ -36,3 +38,5 @@ services:
       PMA_HOST: "db"
       PMA_USER: apiuser
       PMA_PASSWORD: apipasswd
+volumes:
+  mysql_data:
