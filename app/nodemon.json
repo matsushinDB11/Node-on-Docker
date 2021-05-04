@@ -1,4 +1,0 @@
-{
-  "watch": ["./routes/*"],
-  "ext": "js"
-}
